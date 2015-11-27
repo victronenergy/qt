@@ -147,7 +147,7 @@
 /* CPU(MIPS) - MIPS 32-bit and 64-bit */
 #if (defined(mips) || defined(__mips__) || defined(MIPS) || defined(_MIPS_) \
     || defined(__mips64))
-#if defined(__mips64)
+#if defined(__mips64) && !defined(_ABIN32)
 #define WTF_CPU_MIPS64 1
 #define WTF_MIPS_ARCH __mips64
 #else
