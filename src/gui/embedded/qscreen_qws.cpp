@@ -1208,9 +1208,9 @@ void qt_blit_setup(QScreen *screen, const QImage &image,
 #ifdef QT_QWS_DEPTH_24
     case 24:
         if (screen->pixelType() == QScreen::NormalPixel)
-            screen->d_ptr->blit = blit_qrgb888;
-        else
             screen->d_ptr->blit = blit_24;
+        else
+            screen->d_ptr->blit = blit_qrgb888;
         break;
 #endif
 #ifdef QT_QWS_DEPTH_18
