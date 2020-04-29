@@ -199,3 +199,4 @@ CONFIG(qt_minimal) {
 }
 
 contains(DEFINES, QT_NO_UITOOLS): CONFIG -= uitools
+QMAKE_CXXFLAGS += -std=gnu++98
