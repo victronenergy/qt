@@ -104,7 +104,7 @@ public:
             attached->setView(view);
 
         // assuming the view destroys the items, this will disconnect automatically
-        item->connect(item, SIGNAL(showChanged(bool)), view, SLOT(showChanged()));
+        item->connect(item, SIGNAL(showChanged(bool)), view, SLOT(showChanged()), Qt::QueuedConnection);
     }
 
     qreal position() const {
